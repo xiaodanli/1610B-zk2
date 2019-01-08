@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .wrap header {
+    width: 100%;
+    height: 44px;
+    background: gray;
+    flex-shrink: 0; }
+  .wrap .list-wrap {
+    width: 100%;
+    flex: 1;
+    overflow: hidden; }
+    .wrap .list-wrap .inner-list {
+      position: relative;
+      min-height: 100%; }
+      .wrap .list-wrap .inner-list:before {
+        content: attr(up);
+        width: 100%;
+        height: 44px;
+        position: absolute;
+        bottom: -44px;
+        left: 0;
+        background: gray; }
+    .wrap .list-wrap li {
+      width: 100%;
+      height: 200px;
+      border-bottom: 1px solid gray; }
